@@ -3,7 +3,7 @@ import streamlit as st
 import time
 import random
 import pandas as pd
-from fpdf import FPDF
+#from fpdf import FPDF
 from streamlit.components.v1 import html
 from database import *
 
@@ -32,15 +32,15 @@ def export_to_excel(students):
     df.to_excel("students.xlsx", index=False)
     st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
 
-def export_to_pdf(students):
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
-    pdf.cell(200, 10, txt="Registered Students", ln=1, align="C")
-    for s in students:
-        pdf.cell(200, 10, txt=f"ID: {s[0]}, Name: {s[1]}, Score: {s[3]}, Time: {s[4]}, Semester: {s[5]}", ln=1)
-    pdf.output("students.pdf")
-    st.download_button("📤 Export to PDF", data=open("students.pdf", "rb"), file_name="students.pdf")
+#def export_to_pdf(students):
+    #pdf = FPDF()
+    #pdf.add_page()
+    #pdf.set_font("Arial", size=12)
+    #pdf.cell(200, 10, txt="Registered Students", ln=1, align="C")
+    #for s in students:
+       # pdf.cell(200, 10, txt=f"ID: {s[0]}, Name: {s[1]}, Score: {s[3]}, Time: {s[4]}, Semester: {s[5]}", ln=1)
+    #pdf.output("students.pdf")
+    #st.download_button("📤 Export to PDF", data=open("students.pdf", "rb"), file_name="students.pdf")
 
 def admin_dashboard():
     st.title("🛠️ Admin Dashboard")
