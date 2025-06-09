@@ -110,27 +110,7 @@ def admin_dashboard():
             st.success(f"Reset exam attempt for Student ID: {sid}")
 
 def exam_page():
-    html(
-        '''
-    <script>
 
-    document.addEventListener('visibilitychange', function() {
-      if (document.hidden) {
-        alert("you switch the rab");
-        code=prompt("type code");
-        
-        while (code!=25){
-            alert("jklkj")
-        }
-        
-      
-
-      }
-    });
-  </script>
-
-'''
-    )
     st.title("📘 Student Exam Portal")
 
     if not st.session_state.get("student_authenticated"):
@@ -166,6 +146,27 @@ def exam_page():
         st.session_state.answers = {}
 
     if st.session_state.get("exam_started"):
+        html(
+        '''
+    <script>
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        alert("you switch the rab");
+        code=prompt("type code");
+        
+        while (code!=25){
+            alert("jklkj")
+        }
+        
+      
+
+      }
+    });
+  </script>
+
+'''
+    )
         
 
         
