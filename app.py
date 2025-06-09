@@ -215,12 +215,6 @@ def main():
         exam_page()
         st.header(":red[welcome] to exam page")
 
-hide_st_style = """
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-"""
-st.markdown(hide_st_style, unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
