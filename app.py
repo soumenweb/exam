@@ -8,15 +8,6 @@ from streamlit.components.v1 import html
 from database import *
 
 st.set_page_config(page_title="Vidyasagar",page_icon="🎓",layout="wide",initial_sidebar_state="expanded")
-[theme]
-base="light"
-backgroundColor="white"
-secondaryBackgroundColor="lavender"
-codeBackgroundColor="powderBlue"
-
-[theme.sidebar]
-backgroundColor="ghostWhite"
-secondaryBackgroundColor="lavender"
 
 hide_st_style = """
    <style>
