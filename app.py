@@ -7,7 +7,7 @@ import pandas as pd
 from streamlit.components.v1 import html
 from database import *
 
-st.set_page_config(page_title="Vidyasagar Computer Centre",page_icon="🎓",layout="wide",initial_sidebar_state="expanded")
+st.set_page_config(page_title="Vidyasagar",page_icon="🎓",layout="wide",initial_sidebar_state="expanded")
 hide_st_style = """
    <style>
    #MainMenu {visibility: hidden;}
