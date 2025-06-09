@@ -61,8 +61,8 @@ def admin_dashboard():
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
         st.info(f"Total Registered Students: {len(students)}")
-        export_to_excel(students)
-        export_to_pdf(students)
+        #export_to_excel(students)
+      #  export_to_pdf(students)
         for s in students:
             st.text(f"ID: {s[0]} | Name: {s[1]} | Score: {s[3]} | Time: {s[4]} | Semester: {s[5]}")
             if st.button(f"Delete {s[0]}"):
