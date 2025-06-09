@@ -110,28 +110,7 @@ def admin_dashboard():
             st.success(f"Reset exam attempt for Student ID: {sid}")
 
 def exam_page():
-#     # html(
-#         '''
-#     <script>
-
-#     document.addEventListener('visibilitychange', function() {
-#       if (document.hidden) {
-#         alert("you switch the rab");
-#         code=prompt("type code");
-        
-#         while (code!=25){
-#             alert("jklkj")
-#         }
-        
-      
-
-#       }
-#     });
-#   </script>
-
-# '''
-#     )
-    st.title("📘 Student Exam Portal")
+    st.title("📘 Student :red[Exam] Portal")
 
     if not st.session_state.get("student_authenticated"):
         name = st.text_input("Enter Your Name")
