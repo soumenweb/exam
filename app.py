@@ -160,8 +160,6 @@ def exam_page():
     document.addEventListener('visibilitychange', function() {
       if (document.hidden) {
         alert("you switch the tab...You got one chance );
-        userName = prompt("waring code?");
-        
         while (userName!=700636){
             alert("You Switch this tab! sorry you are not attemed this exam")
         }
