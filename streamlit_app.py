@@ -3,10 +3,10 @@ import streamlit as st
 import time
 import random
 import pandas as pd
-#from fpdf import FPDF
+# from fpdf import FPDF
 from streamlit.components.v1 import html
 from database import *
-#import openpyxl
+# import openpyxl
 
 
 st.set_page_config(page_title="Exam Web App", layout="centered")
@@ -28,20 +28,20 @@ def admin_login():
         else:
             st.error("Invalid credentials")
 
-# export_to_excel(students):
-    #df = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
-    d#f.to_excel("students.xlsx", index=False)
-    #st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
+# def export_to_excel(students):
+#     df = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
+#     df.to_excel("students.xlsx", index=False)
+#     st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
 
-#def export_to_pdf(students):
-    #pdf = FPDF()
-    #pdf.add_page()
-    #pdf.set_font("Arial", size=12)
-    #pdf.cell(200, 10, txt="Registered Students", ln=1, align="C")
-    #for s in students:
-     #   pdf.cell(200, 10, txt=f"ID: {s[0]}, Name: {s[1]}, Score: {s[3]}, Time: {s[4]}, Semester: {s[5]}", ln=1)
-    #pdf.output("students.pdf")
-    #st.download_button("📤 Export to PDF", data=open("students.pdf", "rb"), file_name="students.pdf")
+# def export_to_pdf(students):
+#     pdf = FPDF()
+#     pdf.add_page()
+#     pdf.set_font("Arial", size=12)
+#     pdf.cell(200, 10, txt="Registered Students", ln=1, align="C")
+#     for s in students:
+#         pdf.cell(200, 10, txt=f"ID: {s[0]}, Name: {s[1]}, Score: {s[3]}, Time: {s[4]}, Semester: {s[5]}", ln=1)
+#     pdf.output("students.pdf")
+#     st.download_button("📤 Export to PDF", data=open("students.pdf", "rb"), file_name="students.pdf")
 
 def admin_dashboard():
     st.title("🛠️ Admin Dashboard")
@@ -54,8 +54,8 @@ def admin_dashboard():
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
         st.info(f"Total Registered Students: {len(students)}")
-       # export_to_excel(students)
-        #export_to_pdf(students)
+        # export_to_excel(students)
+        # export_to_pdf(students)
         for s in students:
             st.text(f"ID: {s[0]} | Name: {s[1]} | Score: {s[3]} | Time: {s[4]} | Semester: {s[5]}")
             if st.button(f"Delete {s[0]}"):
@@ -110,7 +110,27 @@ def admin_dashboard():
             st.success(f"Reset exam attempt for Student ID: {sid}")
 
 def exam_page():
+#     # html(
+#         '''
+#     <script>
 
+#     document.addEventListener('visibilitychange', function() {
+#       if (document.hidden) {
+#         alert("you switch the rab");
+#         code=prompt("type code");
+        
+#         while (code!=25){
+#             alert("jklkj")
+#         }
+        
+      
+
+#       }
+#     });
+#   </script>
+
+# '''
+#     )
     st.title("📘 Student Exam Portal")
 
     if not st.session_state.get("student_authenticated"):
