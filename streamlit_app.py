@@ -10,16 +10,20 @@ from database import *
 
 
 st.set_page_config(page_title="Exam Web App", layout="centered")
-import streamlit as st
 
+# Hiding Streamlit UI elements
 hide_st_style = """
-  <style>
-  #MainMenu {visibility: hidden;}
-  footer {visibility: hidden;}
-  header {visibility: hidden;}
-  </style>
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .block-container {
+        padding-top: 1rem;
+    }
+    </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 
 init_db()
