@@ -124,7 +124,7 @@ def admin_dashboard():
             st.success(f"Reset exam attempt for Student ID: {sid}")
 
 def exam_page():
-    st.title("📘 Student exam Portal")
+    st.title("📘 Student :red[exam] Portal")
 
     if not st.session_state.get("student_authenticated"):
         name = st.text_input("Enter Your Name")
