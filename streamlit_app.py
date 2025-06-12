@@ -8,6 +8,11 @@ from streamlit.components.v1 import html
 from database import *
 # import openpyxl
 
+
+st.set_page_config(page_title="Exam Web App", layout="centered")
+
+
+init_db()
 hide_st_style = """
   <style>
   #MainMenu {visibility: hidden;}
@@ -16,11 +21,6 @@ hide_st_style = """
   </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-st.set_page_config(page_title="Exam Web App", layout="centered")
-
-
-init_db()
-
 ADMIN_ID = "admin"
 ADMIN_PASS = "admin123"
 
