@@ -9,7 +9,7 @@ from database import *
 # import openpyxl
 
 
-st.set_page_config(page_title="Exam Web App", layout="centered")
+st.set_page_config(page_title="Exam WebApp", layout="centered")
 
 # Hiding Streamlit UI elements
 hide_st_style = """
