@@ -44,10 +44,10 @@ def admin_login():
         else:
             st.error("Invalid credentials")
 
-def export_to_excel(students):
-    df = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
-    df.to_excel("students.xlsx", index=False)
-    st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
+#def export_to_excel(students):
+    #df = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
+    #df.to_excel("students.xlsx", index=False)
+    #st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
 
 # def export_to_pdf(students):
 #     pdf = FPDF()
@@ -73,7 +73,7 @@ def admin_dashboard():
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
         st.info(f"Total Registered Students: {len(students)}")
-        export_to_excel(students)
+      #  export_to_excel(students)
         # export_to_pdf(students)
         for s in students:
             st.text(f"ID: {s[0]} | Name: {s[1]} | Score: {s[3]} | Time: {s[4]} | Semester: {s[5]}")
