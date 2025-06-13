@@ -6,7 +6,7 @@ import pandas as pd
 # from fpdf import FPDF
 from streamlit.components.v1 import html
 from database import *
-# import openpyxl
+import openpyxl
 
 
 st.set_page_config(page_title="Exam WebApp", layout="centered",page_icon="🎓")
