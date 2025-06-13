@@ -68,7 +68,7 @@ def admin_dashboard():
         sem_filter = st.selectbox("Select Semester to View Students", ["All", "1st", "2nd", "3rd", "4th", "5th", "6th"])
         students = get_all_students()
         data = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
-        st.DataFrame(data)
+        st.dataframe(data)
         st.info("Students Data")
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
