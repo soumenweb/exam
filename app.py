@@ -44,10 +44,10 @@ def admin_login():
         else:
             st.error("Invalid credentials")
 
-  def export_to_excel(students):
+def export_to_excel(students):
     df = pd.DataFrame(students, columns=["ID", "Name", "Submitted", "Score", "Time", "Semester"])
     df.to_excel("students.xlsx", index=False)
-   st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
+    st.download_button("📤 Export to Excel", data=open("students.xlsx", "rb"), file_name="students.xlsx")
 
 # def export_to_pdf(students):
 #     pdf = FPDF()
