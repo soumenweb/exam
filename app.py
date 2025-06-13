@@ -146,7 +146,7 @@ def exam_page():
                 st.success("✅ Login successful. You can now start your exam.")
                 st.rerun()
         return
-    st.header(f"HELLO :red[{st.session_state.name}])
+    st.header(f"HELLO :red[{st.session_state.name}]")
     st.info(f"Welcome {st.session_state.name} ({st.session_state.sid}) 😒😊 Click Start Exam Button and Start Your Exam! All The Best")
     st.info(f"Your Exam Time Is 20min")
     
