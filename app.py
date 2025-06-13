@@ -29,8 +29,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 init_db()
-ADMIN_ID = "admin"
-ADMIN_PASS = "admin123"
+ADMIN_ID = "$soumen"
+ADMIN_PASS = "master@7063code"
 
 def admin_login():
     st.title("🔐 Admin Login")
