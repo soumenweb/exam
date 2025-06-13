@@ -146,8 +146,10 @@ def exam_page():
                 st.success("✅ Login successful. You can now start your exam.")
                 st.rerun()
         return
-
-    st.info(f"Welcome {st.session_state.name} ({st.session_state.sid})")
+    st.header(f"HELLO :red[{st.session_state.name}])
+    st.info(f"Welcome {st.session_state.name} ({st.session_state.sid}) 😒😊 Click Start Exam Button and Start Your Exam! All The Best")
+    st.info(f"Your Exam Time Is 20min")
+    
 
     if st.button("Start Exam") and not st.session_state.get("exam_started"):
         questions = get_all_questions_by_semester(st.session_state.semester)
@@ -201,7 +203,7 @@ def exam_page():
             st.session_state.exam_started = False
             score = sum(1 for q in questions if submitted_answers[q[0]] == q[6])
             submit_exam(st.session_state.sid, score)
-            st.success(f"✅ Exam auto-submitted. Your Score: {score}")
+            st.success(f"✅ Exam auto-submitted.")
             st.session_state.clear()
         elif st.button("Submit Now"):
             st.session_state.exam_started = False
@@ -221,7 +223,6 @@ def main():
             admin_dashboard()
     else:
         exam_page()
-        st.header(":red[welcome] to exam page")
 
 if __name__ == '__main__':
     main()
