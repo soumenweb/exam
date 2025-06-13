@@ -69,6 +69,7 @@ def admin_dashboard():
         students = get_all_students()
         db = pd.DataFrame(students)
         st.DataFrame(db)
+        st.info("Students Data")
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
         st.info(f"Total Registered Students: {len(students)}")
