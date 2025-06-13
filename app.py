@@ -17,6 +17,8 @@ hide_st_style = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+    ._profilePreview_gzau3_63 {visibility: hidden;}
+    ._link_gzau3_10 {visibility: hidden;}
     .block-container {
         padding-top: 1rem;
     }
