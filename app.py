@@ -9,7 +9,7 @@ from database import *
 # import openpyxl
 
 
-st.set_page_config(page_title="Exam WebApp", layout="centered")
+st.set_page_config(page_title="Exam WebApp", layout="centered",page_icon="🎓")
 
 # Hiding Streamlit UI elements
 hide_st_style = """
@@ -67,6 +67,8 @@ def admin_dashboard():
         st.subheader("Registered Students")
         sem_filter = st.selectbox("Select Semester to View Students", ["All", "1st", "2nd", "3rd", "4th", "5th", "6th"])
         students = get_all_students()
+        db = pd.DataFrame(students)
+        st.DataFrame(db)
         if sem_filter != "All":
             students = [s for s in students if s[5] == sem_filter]
         st.info(f"Total Registered Students: {len(students)}")
