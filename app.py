@@ -188,7 +188,7 @@ def exam_page():
         st.warning("🚫 Do not switch tabs. Doing so will auto-submit the exam.")
 
         elapsed = time.time() - st.session_state.start_time
-        remaining = 1500 - int(elapsed)
+        remaining = 1200 - int(elapsed)
         st.warning(f"⏳ Time Remaining: {remaining//60}:{remaining%60:02d} mins")
 
         questions = st.session_state.get("questions", [])
