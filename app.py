@@ -172,11 +172,11 @@ def exam_page():
 
     document.addEventListener('visibilitychange', function() {
       if (document.hidden) {
-        alert("you switch the rab");
-        code=prompt("type code");
+        alert("warning!!..You switch the tab!");
+        code=prompt("Type Warning Code");
         
-        while (code!=25){
-            alert("jklkj")
+        while (code!=707){
+            alert("OOPS!! Your Exam is Lost 😓")
         }
         
       
